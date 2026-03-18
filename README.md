@@ -289,4 +289,4 @@ python eval_label_quality.py \
 
 ## Acknowledgments
 
-This codebase builds on [OpenCOOD](https://github.com/DerrickXuNu/OpenCOOD) and [V2V4Real](https://mobility-lab.seas.ucla.edu/v2v4real/). We thank the authors for their open-source contributions.
+This codebase builds on [OpenCOOD](https://github.com/DerrickXuNu/OpenCOOD), [V2V4Real](https://mobility-lab.seas.ucla.edu/v2v4real/), and [pointnet.pytorch](https://github.com/fxia22/pointnet.pytorch). We thank the authors for their open-source contributions.
