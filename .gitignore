@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Compiled extensions
+*.so
+*.o
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs & debug outputs
+*.log
+distance_info.txt
+
+# Experiment outputs (keep only tar.gz)
+exp/*/
+exp/stage_*/
+
+# Editor
+.vscode/
+.idea/
+*.swp

@@ -1,0 +1,93 @@
+name: rnb-pop-v2v4real
+
+# Path to the root of the V2V4Real dataset
+# See: https://mobility-lab.seas.ucla.edu/v2v4real/
+# data_path: /path/to/v2v4real
+data_path: /fs/scratch/PAS2099/dataset/v2v4real
+
+# Dataset split metadata files (included in this repo under meta_info/)
+meta_info_file_train: meta_info/meta_info_V2V4Real_train.txt
+meta_info_file_total: meta_info/meta_info_V2V4Real_original.txt
+
+# Subset split (subset2 = the split used in the paper)
+resplit_data: true
+train_split: 'subset2'
+
+yaml_parser: "load_point_pillar_params"
+
+# Preprocessing
+preprocess:
+  core_method: 'SpVoxelPreprocessor'
+  args:
+    voxel_size: &voxel_size [0.4, 0.4, 8]
+    max_points_per_voxel: 32
+    max_voxel_train: 16000
+    max_voxel_test: 40000
+  cav_lidar_range: &cav_lidar [-80, -40, -5, 80, 40, 3]
+
+data_augment:
+  - NAME: random_world_flip
+    ALONG_AXIS_LIST: [ 'x' ]
+
+  - NAME: random_world_rotation
+    WORLD_ROT_ANGLE: [ -0.78539816, 0.78539816 ]
+
+  - NAME: random_world_scaling
+    WORLD_SCALE_RANGE: [ 0.95, 1.05 ]
+
+# Post-processing / anchor box settings
+postprocess:
+  core_method: 'VoxelPostprocessor'
+  gt_range: *cav_lidar
+  detector: pointpillar
+  anchor_args:
+    cav_lidar_range: *cav_lidar
+    l: 3.9
+    w: 1.6
+    h: 1.56
+    r: [0, 90]
+    num: &anchor_num 2
+    feature_stride: 4
+  target_args:
+    pos_threshold: 0.6
+    neg_threshold: 0.45
+    score_threshold: 0.20
+  order: 'hwl'
+  max_num: 100
+  nms_thresh: 0.15
+
+# Model: PointPillars
+model:
+  core_method: point_pillar
+  args:
+    voxel_size: *voxel_size
+    lidar_range: *cav_lidar
+    anchor_number: *anchor_num
+    max_cav: 2
+    pillar_vfe:
+      use_norm: true
+      with_distance: false
+      use_absolute_xyz: true
+      num_filters: [64]
+    point_pillar_scatter:
+      num_features: 64
+    base_bev_backbone:
+      layer_nums: [3, 5, 8]
+      layer_strides: [2, 2, 2]
+      num_filters: [64, 128, 256]
+      upsample_strides: [1, 2, 4]
+      num_upsample_filter: [128, 128, 128]
+    shrink_header:
+      kernal_size: [ 3 ]
+      stride: [ 2 ]
+      padding: [ 1 ]
+      dim: [ 256 ]
+      input_dim: 384
+    cls_head_dim: 256
+    anchor_num: *anchor_num
+
+loss:
+  core_method: point_pillar_loss
+  args:
+    cls_weight: 1.0
+    reg: 2.0

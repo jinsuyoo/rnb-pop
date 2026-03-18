@@ -1,0 +1,29 @@
+# Core
+numpy==1.24.1
+scipy==1.5.4
+matplotlib==3.3.4
+opencv-python==4.5.1.48
+shapely==2.0.0
+tqdm
+PyYAML
+easydict
+einops
+timm
+scikit-image
+cython
+
+# Point cloud
+open3d
+
+# Deep learning utilities
+tensorboardX
+
+# Sparse convolution (match your CUDA version)
+# For CUDA 11.8:
+spconv-cu118
+
+# Ranker data generation
+numba==0.49.0
+
+# Optional: Weights & Biases logging
+# wandb
