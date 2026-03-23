@@ -266,8 +266,6 @@ class BaseDataset(Dataset):
             else:
                 prev_last = self.len_record[-1]
                 self.len_record.append(prev_last + len(valid_timestamps))
-            
-        txt_file.close()
 
         print(f"Total number of training scenarios: {len(self.scenario_database)}, total number of data: {num_data}")
 

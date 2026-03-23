@@ -1,20 +1,35 @@
+> **New work:** Check out [When the City Teaches the Car](https://jinsuyoo.info/civet/) — label-free 3D perception from infrastructure!
+
 <div align="center">
 <h1>Learning 3D Perception from Others' Predictions</h1>
 
+<p><em>A label-efficient framework for 3D detection using expert predictions</em></p>
+
 <a href="https://arxiv.org/abs/2410.02646"><img src="https://img.shields.io/badge/arXiv-2410.02646-b31b1b" alt="arXiv"></a>
 <a href="https://jinsuyoo.info/rnb-pop/"><img src="https://img.shields.io/badge/Project_Page-green" alt="Project Page"></a>
-<a href="https://openreview.net/forum?id=gBWXpjkZxO"><img src="https://img.shields.io/badge/OpenReview-ICLR_2025-blue" alt="OpenReview"></a>
+<a href="https://openreview.net/forum?id=Ylk98vWQuQ"><img src="https://img.shields.io/badge/OpenReview-ICLR_2025-blue" alt="OpenReview"></a>
 
-**ICLR 2025**
+<br>
 
-**The Ohio State University · Cornell University**
+**ICLR 2025** &nbsp;·&nbsp; **DriveX @ ICCV 2025 (Oral)**
 
-[Jinsu Yoo](https://jinsuyoo.info/), [Zhenyang Feng](https://github.com/DeFisch), [Tai-Yu Pan](https://tydpan.github.io/), [Yihong Sun](https://yihongsun.github.io), [Cheng Perng Phoo](https://cpphoo.github.io), [Xiangyu Chen](https://cxy1997.github.io), [Mark Campbell](https://campbell.mae.cornell.edu/), [Kilian Q. Weinberger](https://www.cs.cornell.edu/~kilian/), [Bharath Hariharan](https://www.cs.cornell.edu/~bharathh/), [Wei-Lun Chao](https://sites.google.com/view/wei-lun-harry-chao/home)
+<br>
+
+[Jinsu Yoo](https://jinsuyoo.info/)<sup>1</sup>, [Zhenyang Feng](https://github.com/DeFisch)<sup>1</sup>, [Tai-Yu Pan](https://tydpan.github.io/)<sup>1</sup>, [Yihong Sun](https://yihongsun.github.io)<sup>2</sup>, [Cheng Perng Phoo](https://cpphoo.github.io)<sup>2</sup>, [Xiangyu Chen](https://cxy1997.github.io)<sup>2</sup>, [Mark Campbell](https://campbell.mae.cornell.edu/)<sup>2</sup>, [Kilian Q. Weinberger](https://www.cs.cornell.edu/~kilian/)<sup>2</sup>, [Bharath Hariharan](https://www.cs.cornell.edu/~bharathh/)<sup>2</sup>, [Wei-Lun Chao](https://sites.google.com/view/wei-lun-harry-chao/home)<sup>1</sup>
+
+<sup>1</sup>The Ohio State University &nbsp;&nbsp; <sup>2</sup>Cornell University
+
+<br>
+
+---
+
+<img width="700" src="assets/teaser.svg" alt="R&amp;B-POP: a robotaxi shares predicted bounding boxes with an ego vehicle">
+
 </div>
 
 ---
 
-## Overview
+## 🔍 Overview
 
 Can an autonomous vehicle learn 3D perception by observing predictions from a nearby expert agent — without accessing its raw sensor data or model weights? **R&B-POP** answers yes, but shows that naively using expert predictions as pseudo-labels yields poor performance due to two fundamental challenges:
 
@@ -25,7 +40,7 @@ R&B-POP addresses these challenges with a two-stage self-training pipeline on [V
 
 ---
 
-## Installation
+## 🛠️ Installation
 
 ### 1. Create conda environment
 
@@ -82,7 +97,7 @@ cd ../../..
 
 ---
 
-## Dataset: V2V4Real
+## 📦 Dataset: V2V4Real
 
 R&B-POP is evaluated on [V2V4Real](https://mobility-lab.seas.ucla.edu/v2v4real/), a real-world collaborative driving dataset with a Tesla (ego car, `car_id=0`) and a Honda (reference car, `car_id=1`) driving within 100m of each other.
 
@@ -91,7 +106,7 @@ R&B-POP is evaluated on [V2V4Real](https://mobility-lab.seas.ucla.edu/v2v4real/)
 
 ---
 
-## Pretrained Models
+## 🤖 Pretrained Models
 
 | Model | File | Description |
 |---|---|---|
@@ -101,7 +116,7 @@ R&B-POP is evaluated on [V2V4Real](https://mobility-lab.seas.ucla.edu/v2v4real/)
 
 ---
 
-## Usage
+## 🚀 Usage
 
 Set your dataset root once and reuse it throughout:
 
@@ -274,7 +289,7 @@ python eval_label_quality.py \
 
 ---
 
-## Citation
+## 📝 Citation
 
 ```bibtex
 @inproceedings{yoo2025rnbpop,
@@ -287,6 +302,6 @@ python eval_label_quality.py \
 
 ---
 
-## Acknowledgments
+## 🙏 Acknowledgments
 
 This codebase builds on [OpenCOOD](https://github.com/DerrickXuNu/OpenCOOD), [V2V4Real](https://mobility-lab.seas.ucla.edu/v2v4real/), and [pointnet.pytorch](https://github.com/fxia22/pointnet.pytorch). We thank the authors for their open-source contributions.

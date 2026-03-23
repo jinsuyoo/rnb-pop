@@ -1,0 +1,129 @@
+<svg viewBox="0 0 560 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;overflow:visible" font-family="'Carlito','Calibri',sans-serif">
+
+      <!-- Road -->
+      <rect x="0" y="98" width="560" height="40" fill="#e5e7eb" rx="0"/>
+      <line x1="0" y1="118" x2="560" y2="118" stroke="#d1d5db" stroke-width="1" stroke-dasharray="18,12"/>
+      <!-- Road edges -->
+      <line x1="0" y1="98"  x2="560" y2="98"  stroke="#cbd5e1" stroke-width="1.5"/>
+      <line x1="0" y1="138" x2="560" y2="138" stroke="#cbd5e1" stroke-width="1.5"/>
+
+      <g transform="translate(280,68) scale(0.82) translate(-280,-68)">
+      <!-- ââ ROBOTAXI (red/orange, left) ââ -->
+      <!-- shadow -->
+      <ellipse cx="108" cy="137" rx="62" ry="6" fill="#d1d5db" opacity="0.5"/>
+      <!-- body lower -->
+      <rect x="52" y="95" width="112" height="38" fill="#ef4444" rx="6"/>
+      <!-- body upper / cabin -->
+      <path d="M76,95 Q82,68 100,64 L138,64 Q154,68 158,95 Z" fill="#f87171"/>
+      <!-- cabin window dark -->
+      <path d="M84,94 Q88,74 100,70 L138,70 Q148,74 152,94 Z" fill="#1e293b" opacity="0.85"/>
+      <!-- window split line -->
+      <line x1="119" y1="70" x2="118" y2="94" stroke="#f87171" stroke-width="1.5"/>
+      <!-- windshield glare -->
+      <path d="M88,90 Q91,76 98,72 L106,72 Q100,78 96,90 Z" fill="#fff" opacity="0.15"/>
+      <!-- front bumper -->
+      <rect x="158" y="103" width="10" height="18" fill="#dc2626" rx="3"/>
+      <!-- rear bumper -->
+      <rect x="48" y="103" width="10" height="18" fill="#dc2626" rx="3"/>
+      <!-- headlights -->
+      <rect x="159" y="106" width="7" height="7" fill="#fef08a" rx="2" opacity="0.9"/>
+      <!-- tail lights -->
+      <rect x="50" y="106" width="7" height="7" fill="#7f1d1d" rx="2" opacity="0.9"/>
+      <!-- wheels -->
+      <circle cx="75"  cy="135" r="13" fill="#1e293b"/>
+      <circle cx="75"  cy="135" r="7"  fill="#374151"/>
+      <circle cx="75"  cy="135" r="3"  fill="#6b7280"/>
+      <circle cx="141" cy="135" r="13" fill="#1e293b"/>
+      <circle cx="141" cy="135" r="7"  fill="#374151"/>
+      <circle cx="141" cy="135" r="3"  fill="#6b7280"/>
+      <!-- wheel arch -->
+      <path d="M57,118 Q58,106 75,105 Q92,106 93,118" fill="#dc2626" stroke="none"/>
+      <path d="M123,118 Q124,106 141,105 Q158,106 159,118" fill="#dc2626" stroke="none"/>
+      <!-- roof rack / sensor -->
+      <rect x="100" y="59" width="36" height="6" fill="#b91c1c" rx="2"/>
+      <rect x="114" y="53" width="8" height="8" fill="#991b1b" rx="2"/>
+      <!-- wifi signal on sensor -->
+      <g transform="translate(118,47)">
+        <path d="M-7,0 Q0,-6 7,0"  stroke="#ef4444" stroke-width="2" fill="none">
+          <animate attributeName="opacity" values="0.2;1;0.2" dur="1.6s" repeatCount="indefinite"/>
+        </path>
+        <path d="M-11,4 Q0,-10 11,4" stroke="#ef4444" stroke-width="1.5" fill="none">
+          <animate attributeName="opacity" values="0.1;0.6;0.1" dur="1.6s" begin="0.2s" repeatCount="indefinite"/>
+        </path>
+        <circle cx="0" cy="5" r="2.5" fill="#ef4444"/>
+      </g>
+      <!-- label -->
+      <text x="108" y="178" text-anchor="middle" font-size="13" fill="#6b7280" font-family="'Carlito','Calibri',sans-serif" style="transform:none">robotaxi</text>
+      <text x="108" y="192" text-anchor="middle" font-size="11" fill="#9ca3af" font-family="'Carlito','Calibri',sans-serif" style="transform:none">(expert agent)</text>
+
+      <!-- ââ EGO CAR (blue, right) ââ -->
+      <!-- shadow -->
+      <ellipse cx="452" cy="137" rx="62" ry="6" fill="#d1d5db" opacity="0.5"/>
+      <!-- body lower -->
+      <rect x="396" y="95" width="112" height="38" fill="#3b82f6" rx="6"/>
+      <!-- body upper / cabin â slightly different shape, sedan style -->
+      <path d="M416,95 Q420,70 436,66 L476,66 Q494,70 500,95 Z" fill="#60a5fa"/>
+      <!-- cabin window dark -->
+      <path d="M422,94 Q425,76 436,72 L476,72 Q490,76 494,94 Z" fill="#1e293b" opacity="0.85"/>
+      <!-- window split -->
+      <line x1="457" y1="72" x2="456" y2="94" stroke="#60a5fa" stroke-width="1.5"/>
+      <!-- windshield glare -->
+      <path d="M426,90 Q429,78 436,74 L444,74 Q438,80 434,90 Z" fill="#fff" opacity="0.15"/>
+      <!-- front bumper -->
+      <rect x="502" y="103" width="10" height="18" fill="#2563eb" rx="3"/>
+      <!-- rear bumper -->
+      <rect x="392" y="103" width="10" height="18" fill="#2563eb" rx="3"/>
+      <!-- headlights -->
+      <rect x="503" y="106" width="7" height="7" fill="#fef08a" rx="2" opacity="0.9"/>
+      <!-- tail lights -->
+      <rect x="394" y="106" width="7" height="7" fill="#1e3a8a" rx="2" opacity="0.9"/>
+      <!-- wheels -->
+      <circle cx="419" cy="135" r="13" fill="#1e293b"/>
+      <circle cx="419" cy="135" r="7"  fill="#374151"/>
+      <circle cx="419" cy="135" r="3"  fill="#6b7280"/>
+      <circle cx="485" cy="135" r="13" fill="#1e293b"/>
+      <circle cx="485" cy="135" r="7"  fill="#374151"/>
+      <circle cx="485" cy="135" r="3"  fill="#6b7280"/>
+      <!-- wheel arch -->
+      <path d="M401,118 Q402,106 419,105 Q436,106 437,118" fill="#2563eb" stroke="none"/>
+      <path d="M467,118 Q468,106 485,105 Q502,106 503,118" fill="#2563eb" stroke="none"/>
+      <!-- question mark on roof (no perception) -->
+      <text x="456" y="63" text-anchor="middle" font-size="20" fill="#93c5fd" font-weight="700" opacity="0.9">?</text>
+      <!-- label -->
+      <text x="452" y="178" text-anchor="middle" font-size="13" fill="#6b7280" font-family="'Carlito','Calibri',sans-serif" style="transform:none">ego car</text>
+      <text x="452" y="192" text-anchor="middle" font-size="11" fill="#9ca3af" font-family="'Carlito','Calibri',sans-serif" style="transform:none">(no perception)</text>
+
+      <!-- ââ ANIMATED BOUNDING BOXES flying from robotaxi â ego ââ -->
+      <g>
+        <rect x="0" y="-7" width="24" height="15" fill="none" stroke="#ef4444" stroke-width="2" rx="2">
+          <animateTransform attributeName="transform" type="translate"
+            values="168,100; 240,96; 310,92; 384,97" keyTimes="0;0.33;0.66;1"
+            dur="2s" repeatCount="indefinite" begin="0s"/>
+          <animate attributeName="opacity" values="0;1;1;0" dur="2s" repeatCount="indefinite" begin="0s"/>
+        </rect>
+      </g>
+      <g>
+        <rect x="0" y="-6" width="19" height="13" fill="none" stroke="#ef4444" stroke-width="2" rx="2">
+          <animateTransform attributeName="transform" type="translate"
+            values="168,112; 240,108; 310,105; 384,110" keyTimes="0;0.33;0.66;1"
+            dur="2s" repeatCount="indefinite" begin="0.7s"/>
+          <animate attributeName="opacity" values="0;1;1;0" dur="2s" repeatCount="indefinite" begin="0.7s"/>
+        </rect>
+      </g>
+      <g>
+        <rect x="0" y="-6" width="21" height="14" fill="none" stroke="#ef4444" stroke-width="2" rx="2">
+          <animateTransform attributeName="transform" type="translate"
+            values="168,90; 240,87; 310,84; 384,88" keyTimes="0;0.33;0.66;1"
+            dur="2s" repeatCount="indefinite" begin="1.4s"/>
+          <animate attributeName="opacity" values="0;1;1;0" dur="2s" repeatCount="indefinite" begin="1.4s"/>
+        </rect>
+      </g>
+
+      </g>
+      <!-- "share predictions" label + arrow -->
+      <text x="280" y="62" text-anchor="middle" font-size="12" fill="#9ca3af" font-family="'Carlito','Calibri',sans-serif">share predictions</text>
+      <text x="280" y="76" text-anchor="middle" font-size="12" fill="#9ca3af" font-family="'Carlito','Calibri',sans-serif">as pseudo-labels</text>
+      <line x1="192" y1="84" x2="258" y2="84" stroke="#e5e7eb" stroke-width="1"/>
+      <line x1="302" y1="84" x2="375" y2="84" stroke="#e5e7eb" stroke-width="1"/>
+      <polygon points="372,80 381,84 372,88" fill="#e5e7eb"/>
+    </svg>
